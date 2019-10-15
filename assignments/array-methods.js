@@ -109,3 +109,7 @@ console.log(lastNamesAllCaps);
 
 
 // Problem 3
+const companyNameCaps = runners.map((currentItem, index, array) => {
+  return currentItem.company_name.toUpperCase();
+});
+console.log(companyNameCaps);
