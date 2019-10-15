@@ -3,6 +3,27 @@
 // Keep it simple! Remember a closure is just a function
 // that manipulates variables defined in the outer scope.
 // The outer scope can be a parent function, or the top level of the script.
+const parent = () => {
+  const father = 'John';
+  console.log(`${father} is the father`);
+
+  const child = () => {
+    const daughter = 'Rose';
+    console.log(`${father} is the father of ${daughter}`);
+
+    const sibling = () => {
+      const brother = 'Scott';
+      console.log(`${daughter} is the sister of ${brother} and ${father} is the father of ${brother}`)
+    }
+    sibling();
+  }
+  child();
+
+}
+parent();
+
+
+
 
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
